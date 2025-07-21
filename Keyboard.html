@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Keyboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <textarea id="output" placeholder="Type here..."></textarea>
+
+
+  <!-- Letters Layout -->
+  <div id="layout-letters" class="keyboard">
+    <div class="row">
+      <div class="key" onclick="typeKey('Q')">Q</div>
+      <div class="key" onclick="typeKey('W')">W</div>
+      <div class="key" onclick="typeKey('E')">E</div>
+      <div class="key" onclick="typeKey('R')">R</div>
+      <div class="key" onclick="typeKey('T')">T</div>
+      <div class="key" onclick="typeKey('Y')">Y</div>
+      <div class="key" onclick="typeKey('U')">U</div>
+      <div class="key" onclick="typeKey('I')">I</div>
+      <div class="key" onclick="typeKey('O')">O</div>
+      <div class="key" onclick="typeKey('P')">P</div>
+    </div>
+    <div class="row">
+      <div class="key" onclick="typeKey('A')">A</div>
+      <div class="key" onclick="typeKey('S')">S</div>
+      <div class="key" onclick="typeKey('D')">D</div>
+      <div class="key" onclick="typeKey('F')">F</div>
+      <div class="key" onclick="typeKey('G')">G</div>
+      <div class="key" onclick="typeKey('H')">H</div>
+      <div class="key" onclick="typeKey('J')">J</div>
+      <div class="key" onclick="typeKey('K')">K</div>
+      <div class="key" onclick="typeKey('L')">L</div>
+    </div>
+    <div class="row">
+      <div class="key" onclick="typeKey('Z')">Z</div>
+      <div class="key" onclick="typeKey('X')">X</div>
+      <div class="key" onclick="typeKey('C')">C</div>
+      <div class="key" onclick="typeKey('V')">V</div>
+      <div class="key" onclick="typeKey('B')">B</div>
+      <div class="key" onclick="typeKey('N')">N</div>
+      <div class="key" onclick="typeKey('M')">M</div>
+      <div class="key" onclick="backspace()">⌫</div>
+    </div>
+    <div class="row">
+      <div class="key" onclick="toggleShift()">⇧</div>
+      <div class="key" onclick="switchLayout('symbols')">123 ↓</div>
+      <div class="key" onclick="typeKey(',')">,</div>
+      <div class="key" onclick="typeKey('?')">?</div>
+      <div class="key space" onclick="typeKey(' ')">Space</div>
+      <div class="key" onclick="typeKey('.')">.</div>
+      <div class="key" onclick="typeKey('\n')">⏎</div>
+      <div class="key" onclick="switchLayout('emojis')">😊</div>
+    </div>
+  </div>
+
+
+  <!-- Symbols Layout -->
+  <div id="layout-symbols" class="keyboard hidden">
+    <div class="row">
+      <div class="key" onclick="typeKey('1')">1</div>
+      <div class="key" onclick="typeKey('2')">2</div>
+      <div class="key" onclick="typeKey('3')">3</div>
+      <div class="key" onclick="typeKey('4')">4</div>
+      <div class="key" onclick="typeKey('5')">5</div>
+      <div class="key" onclick="typeKey('6')">6</div>
+      <div class="key" onclick="typeKey('7')">7</div>
+      <div class="key" onclick="typeKey('8')">8</div>
+      <div class="key" onclick="typeKey('9')">9</div>
+      <div class="key" onclick="typeKey('0')">0</div>
+    </div>
+    <div class="row">
+      <div class="key" onclick="typeKey('!')">!</div>
+      <div class="key" onclick="typeKey('@')">@</div>
+      <div class="key" onclick="typeKey('#')">#</div>
+      <div class="key" onclick="typeKey('$')">$</div>
+      <div class="key" onclick="typeKey('%')">%</div>
+      <div class="key" onclick="typeKey('&')">&</div>
+      <div class="key" onclick="typeKey('*')">*</div>
+      <div class="key" onclick="typeKey('(')">(</div>
+      <div class="key" onclick="typeKey(')')">)</div>
+    </div>
+    <div class="row">
+      <div class="key" onclick="switchLayout('letters')">ABC ↑</div>
+      <div class="key" onclick="typeKey('_')">_</div>
+      <div class="key" onclick="typeKey('-')">-</div>
+      <div class="key" onclick="typeKey('+')">+</div>
+      <div class="key" onclick="typeKey('=')">=</div>
+      <div class="key" onclick="typeKey('/')">/</div>
+      <div class="key" onclick="backspace()">⌫</div>
+    </div>
+  </div>
+
+
+  <!-- Emoji Layout -->
+  <div id="layout-emojis" class="keyboard hidden">
+    <div class="row">
+      <div class="key" onclick="typeKey('😊')">😊</div>
+      <div class="key" onclick="typeKey('😂')">😂</div>
+      <div class="key" onclick="typeKey('❤️')">❤️</div>
+      <div class="key" onclick="typeKey('👍')">👍</div>
+      <div class="key" onclick="typeKey('😢')">😢</div>
+    </div>
+    <div class="row">
+      <div class="key" onclick="typeKey('😍')">😍</div>
+      <div class="key" onclick="typeKey('😎')">😎</div>
+      <div class="key" onclick="typeKey('😡')">😡</div>
+      <div class="key" onclick="typeKey('🎉')">🎉</div>
+      <div class="key" onclick="typeKey('🥺')">🥺</div>
+    </div>
+    <div class="row">
+      <div class="key" onclick="switchLayout('letters')">ABC ↑</div>
+      <div class="key" onclick="backspace()">⌫</div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
